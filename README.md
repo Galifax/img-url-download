@@ -3,7 +3,7 @@
 This package use to download image from url to your file system
 
 ## Instalation
-in composer.json 
+paste to composer.json 
 <pre>
 "require": {
     ...
@@ -11,6 +11,9 @@ in composer.json
     ...
 }
 </pre>
+
+Then run composer update in cmd
+
 ## Usage
 
 <pre>
