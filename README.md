@@ -10,7 +10,6 @@ Composer:
 ## Usage
 
 <pre>
-<?php
 require_once "vendor/autoload.php";
 
 use Galifax/Image;
