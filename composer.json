@@ -2,7 +2,6 @@
     "name": "galifax/img-url-download",
     "description": "Download image from url to file system",
     "license": "proprietary",
-    "minimum-stability": "dev",
     "authors": [
         {
             "name": "Andrey Serediuk",
