@@ -12,7 +12,10 @@ paste to composer.json
 }
 </pre>
 
-Then run composer update in cmd
+Then run in console command
+<pre>
+composer update 
+</pre>
 
 ## Usage
 
