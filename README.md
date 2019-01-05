@@ -3,7 +3,7 @@
 This package use to download image from url to your file system
 
 ## Instalation
-Composer:
+in composer.json 
 <pre>
 "require": {
     ...
