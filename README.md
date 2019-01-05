@@ -1,6 +1,6 @@
 ## About
 
-This package use to download image to your file system
+This package use to download image from url to your file system
 
 ## Instalation
 Composer:
