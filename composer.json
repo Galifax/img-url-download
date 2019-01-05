@@ -1,0 +1,17 @@
+{
+    "name": "galifax/img-url-download",
+    "authors": [
+        {
+            "name": "Andrey Serediuk",
+            "email": "galifax94@gmail.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Galifax\\": "src/"
+        }
+    },
+    "require-dev": {
+        "phpunit/phpunit": "7"
+    }
+}
