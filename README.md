@@ -1,3 +1,7 @@
+## About
+
+This package use to download image to your file system
+
 ## Instalation
 Composer:
 <pre>
@@ -16,5 +20,5 @@ use Galifax/Image;
 
 $url = https//exaple.com; // image url (.png, .jpg, .gif);
 
-Image::download($link);
+Image::download($url);
 </pre>
