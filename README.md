@@ -1,9 +1,9 @@
 ## Instalation
 
-<code>
+<pre>
 "require": {
     ...
         "galifax/img-url-download": "dev-master"
     ...
 }
-<code>
+</pre>
