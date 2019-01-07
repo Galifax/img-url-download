@@ -22,7 +22,7 @@ composer update
 <pre>
 require_once "vendor/autoload.php";
 
-use Galifax/Image;
+use Galifax\Image;
 
 $url = https//exaple.com; // image url (.png, .jpg, .gif);
 
