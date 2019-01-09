@@ -1,14 +1,13 @@
 <?php
 namespace Galifax;
 
-// Класс загрузки изображения
+// Класс загрузки изображения в файловую систему
 class Image
 {
-    protected static $path; // Временное хранение изображения
+    protected static $path; // Путь к директории временного хранение изображения
 
     protected static $name; // название изображения
 
-    // Метод загрузки фпйла в файловую систему
     public static function download($url = '')
     {
         if ($url != '') {
