@@ -13,7 +13,7 @@ class ImageTest extends TestCase
     // Проверка на скачивание изображения с рабочей ссылкой
     public function testDownload()
     {
-        $this->assertNull(Image::download('https://st2.depositphotos.com/2001755/5408/i/450/depositphotos_54081723-stock-photo-beautiful-nature-landscape.jpg'));
+        $this->assertTrue(Image::download('https://st2.depositphotos.com/2001755/5408/i/450/depositphotos_54081723-stock-photo-beautiful-nature-landscape.jpg'));
     }
 
     // Тест исключения на пустую ссылку

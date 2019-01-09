@@ -24,7 +24,26 @@ class Image
                 self::$name = uniqid() . '.' . $ext;
                 // Проверка доступного фррмата изображения
                 if ($ext == 'png' || $ext == 'jpg' || $ext == 'gif') {
-                    self::save($image, $ext); // Метод сохранения изображения
+                    // Путь для временного хранения изображения
+                    $path = __DIR__ . '/../static/' . self::$name;
+                    // Сохранение картинки на диск
+                    file_put_contents($path, $image);
+                    // Заставляем браузерпоказать окно сохранения файла
+                    header('Content-Description: File Transfer');
+                    header('Content-Type: application/octet-stream');
+                    header('Content-Disposition: attachment; filename=' . basename(self::$name));
+                    header('Content-Transfer-Encoding: binary');
+                    header('Expires: 0');
+                    header('Cache-Control: must-revalidate');
+                    header('Pragma: public');
+                    header('Content-Length: ' . filesize($path));
+                    // Чтение изображения
+                    readfile($path);
+                    // Удаление мзображение с диска
+                    unlink($path);
+                    // Прекращение выполнение скрипта
+                    return true;
+                    exit;
 
                 } else {
                     throw new \Exception('Недоступный формат');
@@ -38,29 +57,4 @@ class Image
         }
     }
 
-    // Метод сохранения изображения
-    public function save($image, $ext)
-    {
-        // Путь для временного хранения изображения
-        $path = __DIR__ . '/../static/' . self::$name;
-        // Сохранение картинки на диск
-        file_put_contents($path, $image);
-        // Заставляем браузерпоказать окно сохранения файла
-        header('Content-Description: File Transfer');
-        header('Content-Type: application/octet-stream');
-        header('Content-Disposition: attachment; filename=' . basename(self::$name));
-        header('Content-Transfer-Encoding: binary');
-        header('Expires: 0');
-        header('Cache-Control: must-revalidate');
-        header('Pragma: public');
-        header('Content-Length: ' . filesize($path));
-        // Чтение изображения
-        readfile($path);
-
-        // Удаление мзображение с диска
-        unlink($path);
-        // Прекращение выполнение скрипта
-        return true;
-        exit;
-    }
 }
